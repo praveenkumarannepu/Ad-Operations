@@ -1,104 +1,537 @@
-<h1 align="center">Hi, I'm Praveen Kumar Annepu 👋</h1>
-<h3 align="center">Ad Operations Manager | Campaign Trafficking, Tag Management & Analytics</h3>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Praveen Kumar Annepu — Ad Operations Manager</title>
+<meta name="description" content="Praveen Kumar Annepu — Ad Operations Manager. Campaign trafficking, tag management, and analytics across the Google Marketing Platform.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F4F5F7;
+    --panel:#FFFFFF;
+    --ink:#0F1720;
+    --ink-soft:#5B6472;
+    --line:#E1E4E9;
+    --navy:#1F3864;
+    --navy-deep:#132844;
+    --live:#16A34A;
+    --live-bg:#E9F8EF;
+    --hold:#B45309;
+    --hold-bg:#FDF3E7;
+    --grid-gap:1px;
+    --radius:2px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    font-size:16px;
+    line-height:1.55;
+  }
+  .mono{font-family:'IBM Plex Mono',monospace;}
+  .display{font-family:'Space Grotesk',sans-serif;}
+  a{color:inherit;}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 28px;}
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Location-Hyderabad%2C%20India-1F3864?style=flat-square" />
-  <img src="https://img.shields.io/badge/Experience-7%2B%20Years-1F3864?style=flat-square" />
-  <img src="https://img.shields.io/badge/Status-Open%20to%20Work-2E7D32?style=flat-square" />
-</p>
+  /* ---------- Console header ---------- */
+  .console-bar{
+    background:var(--navy-deep);
+    color:#EAF0FA;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;
+    letter-spacing:.04em;
+    padding:9px 0;
+  }
+  .console-bar .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px;}
+  .console-bar .id-tag{opacity:.65;}
+  .status-pill{
+    display:inline-flex;align-items:center;gap:7px;
+    background:rgba(22,163,74,.16);
+    border:1px solid rgba(22,163,74,.4);
+    color:#7EE2A2;
+    padding:3px 10px 3px 8px;
+    border-radius:999px;
+    font-size:11px;
+  }
+  .status-dot{
+    width:7px;height:7px;border-radius:50%;
+    background:#22C55E;
+    box-shadow:0 0 0 0 rgba(34,197,94,.6);
+    animation:pulse 2s infinite;
+  }
+  @keyframes pulse{
+    0%{box-shadow:0 0 0 0 rgba(34,197,94,.55);}
+    70%{box-shadow:0 0 0 7px rgba(34,197,94,0);}
+    100%{box-shadow:0 0 0 0 rgba(34,197,94,0);}
+  }
+  @media (prefers-reduced-motion: reduce){
+    .status-dot{animation:none;}
+    html{scroll-behavior:auto;}
+  }
 
-<p align="center">
-  <a href="https://www.linkedin.com/in/praveenkumar-annepu-69307b13a"><img src="https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=flat-square&logo=linkedin&logoColor=white" /></a>
-  <a href="mailto:kumarpraveen719@gmail.com"><img src="https://img.shields.io/badge/Email-Contact-D14836?style=flat-square&logo=gmail&logoColor=white" /></a>
-</p>
+  /* ---------- Hero ---------- */
+  header.hero{
+    background:var(--navy);
+    color:#fff;
+    padding:56px 0 40px;
+    border-bottom:6px solid var(--navy-deep);
+  }
+  .hero-eyebrow{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:#9FB3D6;
+    margin:0 0 14px;
+  }
+  h1.name{
+    font-family:'Space Grotesk',sans-serif;
+    font-size:clamp(34px,5.4vw,52px);
+    font-weight:700;
+    margin:0 0 8px;
+    letter-spacing:-.01em;
+  }
+  .role-line{
+    font-family:'Space Grotesk',sans-serif;
+    font-size:clamp(17px,2.4vw,21px);
+    color:#CFE0FF;
+    margin:0 0 22px;
+    font-weight:500;
+  }
+  .hero-desc{
+    max-width:620px;
+    color:#DCE6F8;
+    font-size:15.5px;
+    margin:0 0 26px;
+  }
+  .contact-row{display:flex;flex-wrap:wrap;gap:10px;}
+  .btn{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12.5px;
+    text-decoration:none;
+    padding:9px 16px;
+    border-radius:2px;
+    border:1px solid rgba(255,255,255,.3);
+    color:#fff;
+    transition:background .15s ease, border-color .15s ease;
+    display:inline-flex;align-items:center;gap:6px;
+  }
+  .btn:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.55);}
+  .btn.primary{background:#fff;color:var(--navy-deep);border-color:#fff;font-weight:600;}
+  .btn.primary:hover{background:#DCE6F8;}
 
----
+  /* ---------- Metrics strip ---------- */
+  .metrics{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    background:var(--navy-deep);
+    gap:var(--grid-gap);
+    border-bottom:1px solid rgba(255,255,255,.08);
+  }
+  .metric{
+    background:var(--navy-deep);
+    padding:20px 18px;
+    color:#fff;
+  }
+  .metric .num{
+    font-family:'Space Grotesk',sans-serif;
+    font-size:26px;
+    font-weight:700;
+    color:#8FC7FF;
+  }
+  .metric .lbl{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:10.5px;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    color:#9FB3D6;
+    margin-top:4px;
+  }
+  @media (max-width:640px){ .metrics{grid-template-columns:repeat(2,1fr);} }
 
-### 👤 About Me
+  /* ---------- Section shell ---------- */
+  section{padding:52px 0;}
+  section + section{border-top:1px solid var(--line);}
+  .sec-head{display:flex;align-items:baseline;gap:12px;margin-bottom:26px;}
+  .sec-num{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;color:var(--ink-soft);
+  }
+  h2{
+    font-family:'Space Grotesk',sans-serif;
+    font-size:22px;
+    letter-spacing:-.01em;
+    margin:0;
+  }
 
-I'm an **Ad Operations Manager** with **7+ years** leading end-to-end campaign trafficking, tag management, and analytics implementation across the **Google Marketing Platform** (SA360, CM360, DV360) and Meta Business Manager. I've managed enterprise ad operations for global clients — including a stint at **Deloitte Consulting** — overseeing budgets up to **USD 50,000** across Search, Display, and Paid Social, and leading operations teams of up to 6 members.
+  /* ---------- About ---------- */
+  .about-body{max-width:700px;color:var(--ink);font-size:15.5px;}
+  .about-body p{margin:0 0 14px;}
+  .note{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12.5px;
+    color:var(--ink-soft);
+    background:var(--hold-bg);
+    border-left:3px solid var(--hold);
+    padding:11px 14px;
+    max-width:700px;
+    margin-top:18px;
+  }
 
-My core strength is the *combination* most marketers don't have: hands-on depth in trafficking and verification tools (CM360, DV360, IAS, Sizmek) **plus** the tag management and analytics layer underneath them (GTM, Adobe Launch, Tealium iQ, GA4, Adobe Analytics, DDA attribution).
+  /* ---------- Systems / skills ---------- */
+  .systems{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--grid-gap);background:var(--line);}
+  .system-card{background:var(--panel);padding:20px 20px 22px;}
+  .system-card h3{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11.5px;
+    text-transform:uppercase;
+    letter-spacing:.06em;
+    color:var(--navy);
+    margin:0 0 14px;
+    padding-bottom:10px;
+    border-bottom:1px solid var(--line);
+  }
+  .chip-list{display:flex;flex-wrap:wrap;gap:7px;}
+  .chip{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;
+    background:#F0F2F5;
+    border:1px solid var(--line);
+    padding:5px 9px;
+    border-radius:2px;
+    color:var(--ink);
+  }
+  @media (max-width:760px){ .systems{grid-template-columns:1fr;} }
 
-I recently returned from a planned career break (Jul 2023 – Present) after managing family responsibilities, staying current through continued certification in GA4, SA360, and CM360 — and I'm fully ready to step back into a full-time Ad Ops leadership role.
+  /* ---------- Campaign log (experience) ---------- */
+  .log{border:1px solid var(--line);background:var(--panel);}
+  .log-row{border-bottom:1px solid var(--line);}
+  .log-row:last-child{border-bottom:none;}
+  .log-row summary{
+    list-style:none;
+    cursor:pointer;
+    display:grid;
+    grid-template-columns:70px 1.4fr 1fr 110px 18px;
+    align-items:center;
+    gap:14px;
+    padding:15px 18px;
+    transition:background .12s ease;
+  }
+  .log-row summary::-webkit-details-marker{display:none;}
+  .log-row summary:hover{background:#FAFBFC;}
+  .log-id{font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--ink-soft);}
+  .log-role{font-weight:600;font-size:14.5px;}
+  .log-org{color:var(--ink-soft);font-size:13px;margin-top:2px;}
+  .log-flight{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--ink-soft);}
+  .status-tag{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:10.5px;
+    text-transform:uppercase;
+    letter-spacing:.04em;
+    padding:3px 8px;
+    border-radius:999px;
+    text-align:center;
+    white-space:nowrap;
+  }
+  .status-tag.completed{background:#EEF1F5;color:#4B5563;border:1px solid #D8DCE3;}
+  .status-tag.standby{background:var(--live-bg);color:#166534;border:1px solid #B9E6C6;}
+  .chev{
+    width:18px;height:18px;
+    display:flex;align-items:center;justify-content:center;
+    color:var(--ink-soft);
+    transition:transform .18s ease;
+  }
+  .log-row[open] .chev{transform:rotate(90deg);}
+  .log-detail{padding:0 18px 20px 102px;}
+  .log-detail ul{margin:0;padding:0;list-style:none;}
+  .log-detail li{
+    position:relative;
+    padding-left:16px;
+    margin-bottom:8px;
+    font-size:14px;
+    color:var(--ink);
+  }
+  .log-detail li::before{
+    content:"›";
+    position:absolute;left:0;top:0;
+    color:var(--navy);
+    font-weight:700;
+  }
+  @media (max-width:680px){
+    .log-row summary{grid-template-columns:1fr 18px;grid-template-areas:"id chev" "role role" "flight flight" "status status";row-gap:4px;}
+    .log-id{grid-area:id;}
+    .chev{grid-area:chev;}
+    .log-role{grid-area:role;}
+    .log-flight{grid-area:flight;}
+    .status-tag{grid-area:status;justify-self:start;}
+    .log-detail{padding-left:18px;}
+  }
 
----
+  /* ---------- Achievements ---------- */
+  .achv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--grid-gap);background:var(--line);}
+  .achv-card{background:var(--panel);padding:18px 20px;font-size:14px;}
+  .achv-card .tag{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:10.5px;color:var(--navy);text-transform:uppercase;letter-spacing:.05em;
+    margin-bottom:6px;display:block;
+  }
+  @media (max-width:760px){ .achv-grid{grid-template-columns:1fr;} }
 
-### 🛠️ Core Skills
+  /* ---------- Certifications ---------- */
+  .cert-list{display:flex;flex-wrap:wrap;gap:9px;}
+  .cert-chip{
+    font-size:13px;
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-left:3px solid var(--navy);
+    padding:8px 13px;
+    border-radius:2px;
+  }
 
-**Campaign Trafficking & Verification**
-<br/>
-![CM360](https://img.shields.io/badge/CM360-4285F4?style=flat-square&logo=googleads&logoColor=white)
-![DV360](https://img.shields.io/badge/DV360-4285F4?style=flat-square&logo=googleads&logoColor=white)
-![SA360](https://img.shields.io/badge/SA360-4285F4?style=flat-square&logo=googleads&logoColor=white)
-![Sizmek](https://img.shields.io/badge/Sizmek-333333?style=flat-square)
-![IAS](https://img.shields.io/badge/IAS-333333?style=flat-square)
-![Meta Business Manager](https://img.shields.io/badge/Meta%20Business%20Manager-1877F2?style=flat-square&logo=meta&logoColor=white)
+  /* ---------- Footer / education ---------- */
+  footer{
+    background:var(--navy-deep);
+    color:#DCE6F8;
+    padding:44px 0 30px;
+  }
+  footer h2{color:#fff;}
+  .footer-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:40px;}
+  .foot-col .lbl{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;
+    color:#8FA3C4;margin-bottom:8px;
+  }
+  .foot-col p{margin:0 0 6px;font-size:14px;color:#CFDCF2;}
+  .foot-bottom{
+    margin-top:36px;padding-top:20px;border-top:1px solid rgba(255,255,255,.12);
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;
+    font-family:'IBM Plex Mono',monospace;font-size:11px;color:#7E93B8;
+  }
+  @media (max-width:680px){ .footer-grid{grid-template-columns:1fr;} }
+</style>
+</head>
+<body>
 
-**Tag Management**
-<br/>
-![GTM](https://img.shields.io/badge/Google%20Tag%20Manager-246FDB?style=flat-square&logo=googletagmanager&logoColor=white)
-![Adobe Launch](https://img.shields.io/badge/Adobe%20Launch-FF0000?style=flat-square&logo=adobe&logoColor=white)
-![Tealium](https://img.shields.io/badge/Tealium%20iQ-00A9E0?style=flat-square)
+  <div class="console-bar">
+    <div class="wrap">
+      <span class="id-tag">PROFILE&nbsp;ID: AD-OPS-PKA-07 // HYDERABAD, IN</span>
+      <span class="status-pill"><span class="status-dot"></span>OPEN TO WORK</span>
+    </div>
+  </div>
 
-**Analytics & Attribution**
-<br/>
-![GA4](https://img.shields.io/badge/Google%20Analytics%204-E37400?style=flat-square&logo=googleanalytics&logoColor=white)
-![Adobe Analytics](https://img.shields.io/badge/Adobe%20Analytics-FA0F00?style=flat-square&logo=adobe&logoColor=white)
-![Looker Studio](https://img.shields.io/badge/Looker%20Studio-4285F4?style=flat-square&logo=looker&logoColor=white)
+  <header class="hero">
+    <div class="wrap">
+      <p class="hero-eyebrow">Campaign Trafficking · Tag Management · Analytics</p>
+      <h1 class="name">Praveen Kumar Annepu</h1>
+      <p class="role-line">Ad Operations Manager</p>
+      <p class="hero-desc">7+ years running enterprise ad operations across the Google Marketing Platform — trafficking, verification, tag deployment, and attribution, end to end.</p>
+      <div class="contact-row">
+        <a class="btn primary" href="mailto:kumarpraveen719@gmail.com">Email me →</a>
+        <a class="btn" href="https://www.linkedin.com/in/praveenkumar-annepu-69307b13a" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="tel:+919703299098">+91 9703299098</a>
+      </div>
+    </div>
+  </header>
 
-**Other Platforms & Tools**
-<br/>
-![Google Ads](https://img.shields.io/badge/Google%20Ads-4285F4?style=flat-square&logo=googleads&logoColor=white)
-![Twitter Ads](https://img.shields.io/badge/Twitter%20Ads-1DA1F2?style=flat-square&logo=twitter&logoColor=white)
-![JIRA](https://img.shields.io/badge/JIRA-0052CC?style=flat-square&logo=jira&logoColor=white)
+  <div class="metrics">
+    <div class="metric"><div class="num">7+</div><div class="lbl">Years Experience</div></div>
+    <div class="metric"><div class="num">$50K</div><div class="lbl">Max Budget Managed</div></div>
+    <div class="metric"><div class="num">6</div><div class="lbl">Team Members Led</div></div>
+    <div class="metric"><div class="num">8</div><div class="lbl">Certifications</div></div>
+  </div>
 
----
+  <section id="about">
+    <div class="wrap">
+      <div class="sec-head"><span class="sec-num mono">01</span><h2>About</h2></div>
+      <div class="about-body">
+        <p>I lead end-to-end campaign trafficking, tag management, and analytics implementation across <strong>SA360, CM360, and DV360</strong>, plus Meta Business Manager. At Deloitte Consulting I managed enterprise ad operations for global clients, overseeing budgets up to <strong>USD 50,000</strong> across Search, Display, and Paid Social.</p>
+        <p>My core strength is the combination most marketers don't have: hands-on depth in trafficking and verification tools (CM360, DV360, IAS, Sizmek) <strong>plus</strong> the tag management and analytics layer underneath them (GTM, Adobe Launch, Tealium iQ, GA4, Adobe Analytics, DDA attribution).</p>
+        <div class="note">STATUS NOTE — Returned from a planned career break (Jul 2023–Present) after managing family responsibilities. Stayed current via continued certification in GA4, SA360, and CM360. Fully ready for full-time Ad Ops leadership work.</div>
+      </div>
+    </div>
+  </section>
 
-### 💼 Experience Snapshot
+  <section id="systems">
+    <div class="wrap">
+      <div class="sec-head"><span class="sec-num mono">02</span><h2>Systems &amp; Tools</h2></div>
+      <div class="systems">
+        <div class="system-card">
+          <h3>Trafficking &amp; Verification</h3>
+          <div class="chip-list">
+            <span class="chip">CM360</span><span class="chip">DV360</span><span class="chip">SA360</span>
+            <span class="chip">Sizmek</span><span class="chip">IAS</span><span class="chip">Meta Business Manager</span>
+          </div>
+        </div>
+        <div class="system-card">
+          <h3>Tag Management</h3>
+          <div class="chip-list">
+            <span class="chip">Google Tag Manager</span><span class="chip">Adobe Launch</span><span class="chip">Tealium iQ</span>
+          </div>
+        </div>
+        <div class="system-card">
+          <h3>Analytics &amp; Attribution</h3>
+          <div class="chip-list">
+            <span class="chip">GA4</span><span class="chip">Adobe Analytics</span><span class="chip">DDA Attribution</span><span class="chip">Looker Studio</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-```text
-Consultant, Digital Marketing (Ad Operations)      Deloitte Consulting India     Sep 2021 – Jun 2023
-Campaign Manager                                   Mediamint                     Sep 2019 – Sep 2021
-Business Operations Senior Analyst                 Accenture                     Aug 2017 – Aug 2019
-Claims Analyst                                      ITC Infotech                  Aug 2016 – Mar 2017
-Technical Support Engineer                          Knoah Solutions               Jun 2015 – Jun 2016
-```
+  <section id="log">
+    <div class="wrap">
+      <div class="sec-head"><span class="sec-num mono">03</span><h2>Campaign Log — Experience</h2></div>
+      <div class="log">
 
-**Highlights:**
-- 🎯 Led ad operations for enterprise campaigns with budgets up to **USD 50,000** across Search, Display, and Paid Social
-- 👥 Directed campaign operations teams of up to **6 members**, owning trafficking quality and client-facing reporting
-- 🔄 Managed the **GA3 → GA4 migration** workstream, including event validation, goal setup, and DDA attribution modeling
-- ✅ Implemented and validated Adobe Analytics, GTM, Adobe Launch, and Tealium tracking solutions across enterprise accounts
-- 🏆 Best Employee of the Year (Accenture) · Bravo Award (Knoah Solutions) · Multiple Client Appreciation & Spot Awards (Mediamint)
+        <details class="log-row">
+          <summary>
+            <span class="log-id mono">CAMP-05</span>
+            <span><span class="log-role">Consultant, Digital Marketing (Ad Operations)</span><br><span class="log-org">Deloitte Consulting India Private Limited</span></span>
+            <span class="log-flight">SEP 2021 – JUN 2023</span>
+            <span class="status-tag completed">Completed</span>
+            <span class="chev">›</span>
+          </summary>
+          <div class="log-detail">
+            <ul>
+              <li>Improved tracking accuracy for the J.Crew account by auditing and validating active vs. inactive GTM tags, closing gaps in untracked website events.</li>
+              <li>Maintained the DDA attribution model and led the GA3→GA4 migration workstream for the Revolve account, strengthening conversion measurement reliability.</li>
+              <li>Managed trafficking, daily pacing, and QA across Meta Business Manager, Google Ads, Twitter Ads, and CM360 — delivered weekly and end-of-campaign reporting with zero missed deadlines.</li>
+              <li>Implemented and validated MediaCom pixel tags via Tealium, achieving production deployment with zero rollback incidents; decommissioned legacy pixels.</li>
+              <li>Coordinated a 4-member consulting team across trafficking, analytics, and tracking workstreams; mentored new hires.</li>
+            </ul>
+          </div>
+        </details>
 
----
+        <details class="log-row">
+          <summary>
+            <span class="log-id mono">CAMP-04</span>
+            <span><span class="log-role">Career Break — Family Responsibilities</span><br><span class="log-org">Personal</span></span>
+            <span class="log-flight">JUL 2023 – PRESENT</span>
+            <span class="status-tag standby">Standby</span>
+            <span class="chev">›</span>
+          </summary>
+          <div class="log-detail">
+            <ul>
+              <li>Took a planned career break to manage family responsibilities.</li>
+              <li>Continued professional development through certifications and hands-on practice in GA4, SA360, and CM360.</li>
+              <li>Fully committed to resuming full-time Ad Operations work.</li>
+            </ul>
+          </div>
+        </details>
 
-### 📜 Certifications
+        <details class="log-row">
+          <summary>
+            <span class="log-id mono">CAMP-03</span>
+            <span><span class="log-role">Campaign Manager</span><br><span class="log-org">Mediamint</span></span>
+            <span class="log-flight">SEP 2019 – SEP 2021</span>
+            <span class="status-tag completed">Completed</span>
+            <span class="chev">›</span>
+          </summary>
+          <div class="log-detail">
+            <ul>
+              <li>Led ad operations for Valassis advertisers — campaign setup, trafficking, and reporting across CM360, IAS, and Sizmek with consistent on-time launches.</li>
+              <li>Owned third-party ad verification workflows, reducing discrepancies between served and reported impressions.</li>
+              <li>Directed a 6-member campaign operations team across Genesis, Celtra, Verve, SA360, and Google Ads.</li>
+            </ul>
+          </div>
+        </details>
 
-- Search Ads 360 (SA360) — Google Skillshop
-- Campaign Manager 360 (CM360) — Google Skillshop
-- Google Ads — Google Skillshop
-- Google Analytics 4 (GA4) — Google Skillshop
-- Google Tag Manager (GTM) — Hands-on Implementation
-- Adobe Analytics — Hands-on Implementation & Validation
-- Adobe Launch — Hands-on Implementation
-- Tealium iQ Tag Management — Hands-on Implementation
+        <details class="log-row">
+          <summary>
+            <span class="log-id mono">CAMP-02</span>
+            <span><span class="log-role">Business Operations Senior Analyst</span><br><span class="log-org">Accenture</span></span>
+            <span class="log-flight">AUG 2017 – AUG 2019</span>
+            <span class="status-tag completed">Completed</span>
+            <span class="chev">›</span>
+          </summary>
+          <div class="log-detail">
+            <ul>
+              <li>Supported enterprise advertisers on SA360 — campaign creation, optimization, and reporting across the Google Marketing Platform.</li>
+              <li>Managed campaigns across CM360, Google Ads, Microsoft Ads (Bing), Google Analytics, and Merchant Center.</li>
+              <li>Mentored and trained 4 new hires on SA360 workflows; recognized as Best Employee of the Year.</li>
+            </ul>
+          </div>
+        </details>
 
----
+        <details class="log-row">
+          <summary>
+            <span class="log-id mono">CAMP-01</span>
+            <span><span class="log-role">Claims Analyst &amp; Technical Support Engineer</span><br><span class="log-org">ITC Infotech · Knoah Solutions</span></span>
+            <span class="log-flight">JUN 2015 – MAR 2017</span>
+            <span class="status-tag completed">Completed</span>
+            <span class="chev">›</span>
+          </summary>
+          <div class="log-detail">
+            <ul>
+              <li>Processed claims and supported peer queries for UnitedHealth Group (ITC Infotech).</li>
+              <li>Diagnosed and resolved Internet, Cable TV, and Digital Phone service issues; earned the Bravo Award for service quality (Knoah Solutions).</li>
+            </ul>
+          </div>
+        </details>
 
-### 🎓 Education
+      </div>
+    </div>
+  </section>
 
-- MBA / PGDM — Osmania University, Hyderabad
-- B.Tech / B.E. — Jawaharlal Nehru Technological University (JNTU)
+  <section id="achievements">
+    <div class="wrap">
+      <div class="sec-head"><span class="sec-num mono">04</span><h2>Achievements</h2></div>
+      <div class="achv-grid">
+        <div class="achv-card"><span class="tag">Scale</span>Led ad operations for enterprise campaigns with budgets up to USD 50,000 across Search, Display, and Paid Social simultaneously.</div>
+        <div class="achv-card"><span class="tag">Leadership</span>Directed campaign operations teams of up to 6 members, owning trafficking quality and client-facing reporting.</div>
+        <div class="achv-card"><span class="tag">Migration</span>Managed the GA3→GA4 migration workstream, including event validation, goal setup, and DDA attribution modeling.</div>
+        <div class="achv-card"><span class="tag">Implementation</span>Implemented and validated Adobe Analytics, GTM, Adobe Launch, and Tealium tracking solutions across enterprise accounts.</div>
+        <div class="achv-card"><span class="tag">Recognition</span>Best Employee of the Year (Accenture), Bravo Award (Knoah Solutions), multiple Client Appreciation &amp; Spot Awards (Mediamint).</div>
+        <div class="achv-card"><span class="tag">Certified</span>8 professional certifications across Google Skillshop and hands-on platform implementation.</div>
+      </div>
+    </div>
+  </section>
 
----
+  <section id="certifications">
+    <div class="wrap">
+      <div class="sec-head"><span class="sec-num mono">05</span><h2>Certifications</h2></div>
+      <div class="cert-list">
+        <span class="cert-chip">Search Ads 360 (SA360) — Google Skillshop</span>
+        <span class="cert-chip">Campaign Manager 360 (CM360) — Google Skillshop</span>
+        <span class="cert-chip">Google Ads — Google Skillshop</span>
+        <span class="cert-chip">Google Analytics 4 (GA4) — Google Skillshop</span>
+        <span class="cert-chip">Google Tag Manager — Hands-on</span>
+        <span class="cert-chip">Adobe Analytics — Hands-on</span>
+        <span class="cert-chip">Adobe Launch — Hands-on</span>
+        <span class="cert-chip">Tealium iQ — Hands-on</span>
+      </div>
+    </div>
+  </section>
 
-### 📫 Let's Connect
+  <footer>
+    <div class="wrap">
+      <div class="sec-head"><span class="sec-num mono" style="color:#7E93B8;">06</span><h2>Let's Talk Trafficking</h2></div>
+      <div class="footer-grid">
+        <div class="foot-col">
+          <div class="lbl">Contact</div>
+          <p><a href="mailto:kumarpraveen719@gmail.com">kumarpraveen719@gmail.com</a></p>
+          <p><a href="tel:+919703299098">+91 9703299098</a></p>
+          <p><a href="https://www.linkedin.com/in/praveenkumar-annepu-69307b13a" target="_blank" rel="noopener">linkedin.com/in/praveenkumar-annepu</a></p>
+        </div>
+        <div class="foot-col">
+          <div class="lbl">Education &amp; Languages</div>
+          <p>MBA / PGDM — Osmania University, Hyderabad</p>
+          <p>B.Tech / B.E. — JNTU</p>
+          <p>English · Hindi · Telugu</p>
+        </div>
+      </div>
+      <div class="foot-bottom">
+        <span>OPEN TO: AD OPERATIONS MANAGER · CAMPAIGN TRAFFICKING · DIGITAL ANALYTICS</span>
+        <span>HYDERABAD, INDIA</span>
+      </div>
+    </div>
+  </footer>
 
-<p align="left">
-  <a href="https://www.linkedin.com/in/praveenkumar-annepu-69307b13a"><img src="https://img.shields.io/badge/LinkedIn-praveenkumar--annepu-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
-  <a href="mailto:kumarpraveen719@gmail.com"><img src="https://img.shields.io/badge/Email-kumarpraveen719%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white" /></a>
-</p>
-
-<p align="center"><i>Open to Ad Operations Manager, Campaign Trafficking, and Digital Analytics roles.</i></p>
+</body>
+</html>
